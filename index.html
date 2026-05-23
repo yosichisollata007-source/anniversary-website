@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom right, #ff758c, #ff7eb3);
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .overlay {
+            padding: 30px 20px;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 25px;
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+        }
+
+        .wife-image {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            white-space: pre-line;
+            margin-bottom: 25px;
+        }
+
+        .video-player {
+            width: 100%;
+            max-width: 700px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 14px 28px;
+            border: none;
+            border-radius: 30px;
+            background: white;
+            color: #ff4f81;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ffe4ec;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="overlay">
+        <div class="content">
+
+            <img src="wife-photo.jpg" alt="My Palkoova" class="wife-image">
+
+            <h1>Happy Anniversary My Palkoova ❤️</h1>
+
+            <p>
+💖 My Dear Shehnaaz 💖 <br><br>
+
+📖 You make love feel like poetry. <br>
+🚀 The way you support my dreams. <br>
+💓 Your heartbeat is my favorite sound. <br>
+✨ You make me believe in magic. <br>
+😍 The way you look at me with love. <br>
+🥹 You love me even when I'm unlovable. <br>
+📸 The way you remember our special moments. <br>
+🧩 You feel like my missing piece. <br>
+🌈 Your touch calms my storms. <br>
+💪 You never give up on me. <br>
+🌙 You make the nights feel less lonely. <br>
+🌻 You inspire me to be a better person. <br>
+🛡️ Your love is my greatest strength. <br>
+💌 You don't need words to make me feel loved. <br>
+💭 You make my dreams sweeter. <br>
+🎵 Every song reminds me of you. <br>
+🏡 Your love is my safe haven. <br>
+🤍 You make even silence feel comforting. <br>
+⚔️ You never let me fight my battles alone. <br>
+🎀 Your presence is the best gift. <br>
+🎨 You bring color to my dull days. <br>
+🌍 Your love is my greatest adventure. <br>
+💬 You know my unspoken words. <br>
+❤️ Your love makes life worth it. <br>
+🌏 You make distance feel smaller. <br>
+🔥 Your love is louder than any fear. <br>
+🌠 You are my constant in an uncertain world. <br>
+💖 You believe in me when I don't. <br>
+💘 Your love makes my heart race. <br>
+🤲 You hold my heart gently. <br>
+🩹 You see my scars and love me more. <br>
+💍 Your love is a forever kind of thing. <br>
+✨ You turn ordinary moments into magic. <br>
+⭐ You make even the stars jealous. <br>
+💖 You are my reason to believe in love. <br>
+♾️ You are my always and forever. <br>
+💓 Your love is my favorite feeling. <br>
+🌷 You make life a little more beautiful. <br>
+💎 Your love is my greatest treasure. <br>
+⚡ You make me feel alive. <br>
+💗 You make every heartbeat count. <br>
+🙏 Your love is my strongest prayer. <br>
+💑 You make me believe in soulmates. <br>
+🏠 You are my heart's favorite place. <br>
+💞 You make love feel effortless. <br>
+✨ Your love is my quiet miracle. <br>
+⏳ You make every second with you precious. <br>
+📖 You are the love story I always wanted. <br><br>
+
+❤️ I love you because you are you... <br>
+💕 My life with love, happiness, and endless memories. <br>
+💍 I love you forever ❤️
+</p>
+
+            <video controls autoplay muted loop class="video-player">
+                <source src="anniversary-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <button onclick="playMusic()">Play With Sound 🎵</button>
+
+        </div>
+    </div>
+
+    <script>
+        function playMusic() {
+            var audio = document.getElementById('bgMusic');
+
+            if (!audio) {
+                audio = document.createElement('audio');
+                audio.id = 'bgMusic';
+                audio.src = 'anniversary-music.mp3';
+                audio.loop = true;
+                document.body.appendChild(audio);
+            }
+
+            audio.play().catch(function () {
+                alert("Click again to allow music ❤️");
+            });
+        }
+    </script>
+
+</body>
+
+</html>
