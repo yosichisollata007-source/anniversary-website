@@ -6,89 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Anniversary ❤️</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background: linear-gradient(to bottom right, #ff758c, #ff7eb3);
-            color: white;
-            text-align: center;
-            overflow-x: hidden;
-        }
-
-        .overlay {
-            padding: 30px 20px;
-        }
-
-        .content {
-            max-width: 900px;
-            margin: auto;
-            background: rgba(0, 0, 0, 0.4);
-            padding: 25px;
-            border-radius: 20px;
-            backdrop-filter: blur(8px);
-        }
-
-        .wife-image {
-            width: 220px;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 5px solid white;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 42px;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.8;
-            white-space: pre-line;
-            margin-bottom: 25px;
-        }
-
-        .video-player {
-            width: 100%;
-            max-width: 700px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-        }
-
-        button {
-            padding: 14px 28px;
-            border: none;
-            border-radius: 30px;
-            background: white;
-            color: #ff4f81;
-            font-size: 18px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background: #ffe4ec;
-            transform: scale(1.05);
-        }
-    </style>
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- FLOATING HEARTS -->
+    <div class="hearts">
+        <span>❤️</span>
+        <span>💖</span>
+        <span>💕</span>
+        <span>💘</span>
+        <span>❤️</span>
+    </div>
+
+    <!-- FLOWERS -->
+    <div class="petals">
+        <span>🌹</span>
+        <span>🌺</span>
+        <span>🌸</span>
+        <span>🌷</span>
+    </div>
+
+    <!-- FIREWORKS -->
+    <canvas id="fireworks"></canvas>
+
+    <!-- AUTO MUSIC -->
+    <audio autoplay loop id="bgMusic">
+        <source src="anniversary-music.mp3" type="audio/mp3">
+    </audio>
+
     <div class="overlay">
+
         <div class="content">
 
-            <img src="wife-photo.jpg" alt="My Palkoova" class="wife-image">
+           <!-- ROUND PHOTO -->
+<img src="wife-photo.jpg" alt="My Love" class="wife-image">
 
+            <!-- TITLE -->
             <h1>Happy Anniversary My Palkoova ❤️</h1>
 
+            <!-- COUNTDOWN -->
+            <h2 id="countdown"></h2>
+
+            <!-- MESSAGE -->
             <p>
 💖 My Dear Shehnaaz 💖 <br><br>
 
@@ -144,36 +106,52 @@
 ❤️ I love you because you are you... <br>
 💕 My life with love, happiness, and endless memories. <br>
 💍 I love you forever ❤️
-</p>
+            </p>
 
+            <!-- VIDEO -->
             <video controls autoplay muted loop class="video-player">
                 <source src="anniversary-video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
 
+            <!-- MUSIC BUTTON -->
             <button onclick="playMusic()">Play With Sound 🎵</button>
 
         </div>
+
     </div>
 
     <script>
-        function playMusic() {
-            var audio = document.getElementById('bgMusic');
 
-            if (!audio) {
-                audio = document.createElement('audio');
-                audio.id = 'bgMusic';
-                audio.src = 'anniversary-music.mp3';
-                audio.loop = true;
-                document.body.appendChild(audio);
-            }
+    // PLAY MUSIC BUTTON
+    function playMusic() {
 
-            audio.play().catch(function () {
-                alert("Click again to allow music ❤️");
-            });
-        }
-    </script>
+        var audio = document.getElementById('bgMusic');
+
+        audio.play().catch(function () {
+            alert("Click again to allow music ❤️");
+        });
+    }
+
+    // TOGETHER TIMER IN SECONDS
+    let seconds = 31104000;
+
+    setInterval(() => {
+
+        seconds++;
+
+        document.getElementById("countdown").innerHTML =
+            "❤️ Together for " + seconds.toLocaleString() + " seconds ❤️";
+
+    }, 1000);
+
+</script> 
+<!-- SCRIPT FILE -->
+    <script src="script.js"></script>
+
 
 </body>
 
-</html>
+</html> add the countdown together second on this code  
+            <!-- COUNTDOWN -->
+            <h2 id="countdown"></h2>
